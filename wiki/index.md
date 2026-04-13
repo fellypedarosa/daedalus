@@ -1,0 +1,75 @@
+---
+tags: [index]
+date_created: 2026-04-12
+source: none
+---
+# Daedalus Wiki Catalog
+
+This is the central catalog of the Daedalus knowledge base.
+
+## Pages
+- [[Emulation_on_Linux|Emulation on Linux]]: A conceptual overview of modern emulators running natively and in containers on Linux.
+- [[LLM_as_Infrastructure_Assistant|LLM as Infrastructure Assistant]]: Managing Linux and container environments using conversation models like Claude Code.
+- [[Distrobox]]: Seamless container integration for host-native performance and workload isolation.
+- [[Virtualization_and_Hypervisors|Virtualization and Hypervisors]]: Distinguishing between Type 1 (Bare Metal) and Type 2 (Hosted) abstraction layers.
+- [[Memory_Management]]: Deep dive into physical memory hierarchy, virtual address spaces, allocators, and garbage collection mechanisms.
+- [[Deployment_Workflows|Deployment Workflows]]: Analyzing PaaS (Heroku), 12-Factor principles, and reproducible production environments.
+- [[Software_Engineering/Web_Architecture_and_Scalability.md|Web Architecture and Scalability]]: Detailed analysis of load balancing, caching, and distributed systems.
+- [[Software_Engineering/Design_and_Project_Management.md|Design and Project Management]]: Scientific foundation vs Engineering craftsmanship and emergent design.
+- [[Container_Orchestration|Container Orchestration]]: Automating service clusters via Kubernetes, Swarm, and OCI standards.
+- [[Infrastructure_and_DevOps/Linux_Internals_and_FHS.md|Linux Distribution Philosophies]]: FHS standards and the competing visions of KISS (Slackware) vs High-Optimization (Gentoo).
+- [[Infrastructure_and_DevOps/Operating_Systems_History.md|Operating System Internals]]: Deep dive into Windows NT history, Pico processes, and subsystem architectures.
+- [[Database_Fundamentals]]: Comparative analysis of RDBMS vs NoSQL, ACID vs BASE, and write-scaling strategies.
+- [[Package_Management_Paradigms|Package Management Paradigms]]: Anatomy of .deb files, dependency solvers, and compilation heuristics.
+- [[Operating_System_Security|Operating System Security]]: Isolation mechanisms, chroot exploits, and the privilege escalation paradigm.
+- [[Linux_Boot_Process|Linux Boot Process]]: The multi-stage journey from UEFI firmware to finalized OS initialization.
+- [[Systemd_and_Service_Management|Systemd and Service Management]]: Managing process lifecycles, targets, and graceful shutdowns in modern Linux.
+- [[Computer_Science/Hardware_Architecture.md|Hardware and Performance]]: CISC vs RISC, M1 architecture, CPU pinning, and cache localization.
+- [[Computer_Science/Digital_Formats_and_Encodings.md|Digital Formats and Encodings]]: Binary vs Text, ASCII/Unicode standards, Magic Numbers, and Homograph attacks.
+- [[Programming/Programming_Languages_Ecosystem.md|Programming Languages Ecosystem]]: Niche strengths, binary compatibility (ABI), and the history of language inheritance.
+- [[Career_Development]]: Analyzing academic specializations (CS vs Eng) and seniority levels (Junior to 10x multiplier).
+- [[Fabio_Akita|Fabio Akita]]: Programmer and content creator focusing on first principles and deep technical explanations.
+- [[Infrastructure_and_DevOps/Networking_Fundamentals.md|Networking Fundamentals]]: Signals, modulation, and physical medium propagation.
+- [[Infrastructure_and_DevOps/Networking_Fundamentals.md|Circuit vs Packet Switching]]: Paradigms of connection-oriented vs stateless packet routing.
+- [[Infrastructure_and_DevOps/Networking_Fundamentals.md|Modulation and Demodulation]]: Digital-to-analog signal conversion and frequency dynamics.
+- [[Computer_Science/Error_Correction_Codes.md|Bit Rot]]: Media degradation and protection via Hamming and Reed-Solomon codes.
+- [[Computer_Science/Error_Correction_Codes.md|Error Correction Codes]]: Paradigms for detecting and correcting bit flips silently.
+- [[Infrastructure_and_DevOps/Storage_and_Filesystems.md|Storage and Filesystems]]: Partitioning (MBR/GPT), RAID strategies, NAS/SAN, and filesystem evolution (FAT, NTFS, ZFS, Btrfs).
+- [[Infrastructure_and_DevOps/OSI_and_TCPIP_Models.md|OSI and TCP/IP Models]]: 7-layer abstraction vs 4-layer practical implementation.
+- [[Infrastructure_and_DevOps/Local_Network_Protocols.md|Local Network Protocols]]: Internal routing mechanisms (DHCP, ARP, Switches).
+- [[Infrastructure_and_DevOps/IP_Addresses_and_NAT.md|IP Addresses and NAT]]: IPv4 scarcity, CGNAT, and IPv6 scalability.
+- [[Infrastructure_and_DevOps/DNS_and_Resolution.md|DNS and Resolution]]: Mapping domains to IPs, Anycast, and DoH security.
+- [[Infrastructure_and_DevOps/Sockets_and_Ports.md|Sockets and Ports]]: IPC primitives, port classes, and the server lifecycle.
+- [[Infrastructure_and_DevOps/Firewalls_and_Proxies.md|Firewalls and Proxies]]: Kernel-level filtering vs application-level intermediation.
+- [[Infrastructure_and_DevOps/SSH_Tunneling.md|SSH Tunneling]]: Bypassing firewalls via Local, Remote, and Dynamic port forwarding.
+- [[Computer_Science/Web_Security_Injections.md|Web Security Injections]]: Command injection vulnerabilities and sanitization strategies.
+- [[Infrastructure_and_DevOps/Storage_and_Filesystems.md|NAS Architecture]]: High-performance storage servers, 10GbE, and SHR.
+- [[Infrastructure_and_DevOps/Shell_Mechanics.md|Shell Mechanics]]: Pipes, redirection primitives, shims, and terminal multiplexing (TMux).
+- [[Computer_Science/Theoretical_Computer_Science.md|Theoretical Computer Science]]: Turing Machines, Turing Completeness, and the Halting Problem.
+- [[Computer_Science/Symmetric_and_Asymmetric_Encryption.md|Symmetric and Asymmetric Encryption]]: Fundamental algorithms covering AES symmetric keys, RSA, and Ed25519 elliptic curve exchange.
+- [[Cryptographic_Hashing|Cryptographic Hashing]]: Fingerprinting binary payloads securely while neutralizing collision and rainbow table vulnerabilities.
+- [[Blockchain_Fundamentals|Blockchain Fundamentals]]: Validating immutability and digital non-fungibility versus failure modes in private secrecy applications equivalent to elections.
+- [[Information_Security_and_Human_Factor|Information Security and Human Factor]]: Sociological vulnerabilities regarding Phishing, Social Engineering and corporate Risk mitigations (SOX/COBIT).
+- [[Disaster_Recovery_and_File_Systems|Disaster Recovery and File Systems]]: The abstraction gap between byte blocks and filesystem superblocks, utilizing dd and photorec.
+- [[Local_Git_Resilience|Local Git Resilience]]: Running purely local and decentralized git networks through ad-hoc USB drives and zero-tier VPNs.
+- [[MFA_and_TOTP|MFA and TOTP]]: Time-Based Multi-Factor Authentication mechanics, RFC 6238 seeds, and hardware secure enclaves.
+- [[Malware_and_Ransomware_Defenses|Malware and Ransomware Defenses]]: Using secure boot, sandboxing VMs, and BTRFS immutable snapshots to quarantine ransomware.
+- [[TLS_and_Certificate_Authorities|TLS and Certificate Authorities]]: The chain of trust, Let's Encrypt automation, and Public Key verification to defeat MitM.
+- [[Digital_Signatures_and_GPG|Digital Signatures and GPG]]: Validating binary origins using Private Key signed payload hashes.
+- [[BitTorrent_and_Distributed_Networks|BitTorrent and Distributed Networks]]: Decoupling tracking servers using InfoHashes, Magnet Links, DHT routing, and P2P exchange.
+- [[Merkle_Trees_and_DAGs|Merkle Trees and DAGs]]: Scaling integrity validations algorithmically via hierarchical hashing structures used in ZFS, BitTorrent, and Git.
+- [[Git_Algorithms_and_Internals|Git Algorithms and Internals]]: Understanding LCS diffing, patch hunks, and the snapshot paradigm.
+- [[Git_and_Version_Control]]: Professional workflows (Rebase, Atomic Commits, Squash) and large repository management (LFS).
+- [[Computer_Science/Compiler_Design.md|Compiler Design]]: Analysis of lexers, parsers, JIT/AOT compilation and machine code generation.
+- [[Computer_Science/Software_Licenses_and_Intellectual_Property.md|Software Licenses and IP]]: Legal frameworks (GPL, MIT, AGPL), Copyleft history, and API copyright (Oracle v Google).
+- [[Software_Engineering/Open_Source_and_Industry_Dynamics.md|Open Source and Industry Dynamics]]: Corporate strategy (Commoditization of the Complement), SaaS Loophole, and Developer growth.
+- [[Infrastructure_and_DevOps/Virtualization_and_High_Performance_Systems.md|High-Performance Virtualization]]: QEMU/KVM/Libvirt, GPU Passthrough (VFIO), and CPU Pinning.
+- [[Artificial_Intelligence/AI_and_LLMs.md|AI and LLMs]]: The reality of Large Language Models in engineering and their economic infrastructure.
+- [[Computer_Science/Compression_Algorithms_and_Multimedia.md|Compression Algorithms and Multimedia]]: Mathematical foundations of entropy encoding, DCT, and video codec mechanics.
+- [[Computer_Science/Concurrency_and_Parallelism.md|Concurrency and Parallelism]]: Threads vs fibers, Actor Model, CSP, and asynchronous I/O strategies.
+- [[Web_Development/History_of_the_Front-End.md|History of the Front-End]]: Evolution of frontend web development, from CGI to React/SPA.
+- [[Databases/PostgreSQL.md|PostgreSQL]]: Postgres architecture, MVCC, and query optimization.
+- [[Programming/Programming_Paradigms.md|Programming Paradigms]]: OOP, functional, imperative paradigms, and design patterns.
+- [[Infrastructure_and_DevOps/RAID_and_Storage_Redundancy.md|RAID and Storage Redundancy]]: RAID levels, SHR, and redundancy strategies.
+- [[Infrastructure_and_DevOps/VPN_and_ZeroTier.md|VPN and ZeroTier]]: VPN tunneling, WireGuard, and P2P overlay networks.
+- [[Artificial_Intelligence/Claude_Code.md|Claude Code]]: Terminal-based LLM agent for infrastructure management and development workflows.

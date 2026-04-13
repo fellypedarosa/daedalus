@@ -1,0 +1,13 @@
+# Ambiente virtual do MCP Server
+.mcp_venv/
+
+# Fontes brutas de terceiros (conteúdo protegido por direitos autorais)
+raw/clipper/
+raw/youtube/
+__pycache__/
+.obsidian/
+*.pyc
+.gemini_worker_context.md
+.task_instruction.txt
+.worker_output.md
+.worker_err.log
