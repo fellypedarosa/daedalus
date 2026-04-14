@@ -85,7 +85,7 @@ O MCP (Model Context Protocol) é um padrão aberto que conecta agentes LLM a fe
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/daedalus.git
+git clone https://github.com/fellypedarosa/daedalus
 cd daedalus
 
 # 2. Crie o venv e instale a dependência
