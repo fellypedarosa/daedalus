@@ -3,13 +3,27 @@ tags: [hardware, performance, virtualization, cpu]
 date_created: 2026-04-12
 sources:
   - "[[Akitando 137 - Games em Máquina Virtual com GPU Passthrough | Entendendo QEMU, KVM, Libvirt]] (Clipper)"
+  - "[[Artificial_Intelligence/FABIO_AKITA_-_Flow_588.md|FABIO AKITA - Flow 588]] (Clipper)"
+  - "[SUPERINTELIGÊNCIA ARTIFICIAL - Podcast 1583](file:///home/rosa/Dropbox/Daedalus/raw/youtube/cataloged/Podcast_1583_Superinteligencia.md) (Clipper)"
 ---
 # Hardware and Performance
 
 Deep technical performance optimization requires understanding the physical topology of the hardware and how the kernel schedules workloads across its resources.
 
 ## CPU Topology and Pinning
-Modern CPUs are not monolithic, but composed of multiple **cores** and **threads** (Hyper-Threading). Efficient virtualization requires mapping virtual CPUs (vCPUs) to physical threads in a way that respects the hardware's internal structure.
+Modern CPUs are not monolithic, but composed of multiple **cores** and **threads** (Hyper-Threading). 
+
+### Specialization: CPU vs. GPU
+A fundamental performance distinction exists between general-purpose logic and massive parallel arithmetic:
+1. **CPU (Scalar/Integer Logic)**: Designed for discrete, non-linear tasks (conditional branches, pointer manipulation). It excels at calculating one high-precision integer at a time inside a finite range (up to $2^{64}$ for 64-bit systems).
+2. **GPU (Matrix/Tensor Multiplications)**: Designed for vector processing. While its individual cores are slower than a CPU's, a GPU can process millions of data points in a single instruction cycle.
+    - **Tensors**: Multidimensional arrays (rank-n arrays).
+    - **Inference Cost**: Running an LLM is a constant stream of matrix-to-matrix multiplications (dot products, cosine similarities). A GPU "multiplies" entire planes of data at once, whereas a CPU would need to iterate through every pixel/vector in a loop.
+### Miniaturization and the 1nm Wall
+Moore's Law (the doubling of transistors every 2 years) hit a physical ceiling in the early 2020s.
+- **Physical Limit**: Transistors reached the **1 nanometer (1nm)** scale—roughly the width of several silicon atoms.
+- **Quantum Tunneling**: Below 1nm, electrons can "leak" through insulating barriers due to quantum effects, causing cross-talk and bit flips.
+- **Paradigm Shift**: Performance scaling now relies on **packaging** (3D stacking, Chiplets) and **architectural specialization** (NPU/APU) rather than pure miniaturization.
 
 ### Cache Localization (L3 Cache)
 - **Hierarchy**: L1 and L2 caches are typically private to a core. The **L3 Cache** is shared among a group of cores (e.g., 8 cores sharing 32MB of L3 in an AMD Ryzen 9).
@@ -58,3 +72,17 @@ SSD performance and lifespan are defined by the bits-per-cell:
 
 ### Paravirtualization (VirtIO)
 Standardized drivers that allow a Guest OS to "collaborate" with the Hypervisor for high-speed I/O (VirtIO-Block), rather than relying on slow software emulation of legacy physical devices (IDE/SATA/E1000).
+
+## AI and LLM Hardware (2026 Update)
+The requirements for AI inference have shifted the focus back to memory bandwidth and total addressable RAM.
+
+### GPU VRAM vs. Unified RAM
+- **Consumer GPUs (NVIDIA RTX 5090)**: While offering the highest TFLOPS, they are bottlenecked by **VRAM** capacity (32GB as of 2026). This limits the local execution of large models (>50B parameters) without heavy quantization.
+- **Unified RAM (AMD Ryzen AI Max)**: Modern APU architectures allow for a shared pool of high-speed RAM (e.g., 128GB LPDDR5x) that can be dynamically allocated to the the GPU (e.g., 96GB for VRAM). This enables running 100B+ parameter models (like Qwen 3.5) locally, albeit with lower TFLOPS than a dedicated high-end GPU.
+
+### Inference Performance Factors
+1. **Memory Bandwidth**: The primary bottleneck for LLM inference. High-speed interconnects and wide memory buses are more critical than raw compute cores for token generation speed.
+2. **Quantization (INT4/INT8)**: Techniques to reduce model size to fit within available VRAM. High-performance inference engines (Llama.cpp, EXL2) optimize these operations for specific hardware instructions (AVX-512, AMX).
+
+---
+*See also*: [[Artificial_Intelligence/AI_and_LLMs.md|AI and LLMs]], [[Artificial_Intelligence/LLM_Harness_and_Reasoning.md|LLM Harness and Reasoning]]

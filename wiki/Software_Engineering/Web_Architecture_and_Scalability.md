@@ -4,8 +4,8 @@ date_created: 2026-04-12
 sources:
   - "[[Akitando 112 - Subindo Aplicações Web em Produção]] (Clipper)"
   - "[[Akitando 113 - A Forma Ideal de Projetos Web]] (Clipper)"
-  - "[[Akitando 133 - Tornando sua App Web Mais Rápida!]] (Clipper)"
-  - "[[Akitando 135 - ChatGPT Consegue te Substituir]] (Clipper)"
+  - "[[Akitando 140 Desbloqueando o Algoritmo do Twitter - Introdução a Grafos]] (Clipper)"
+  - "[[Akitando 142 - Entendendo COMO ChatGPT Funciona - Rodando sua Própria IA]] (Clipper)"
 ---
 # Web Architecture and Scalability
 
@@ -47,6 +47,23 @@ Never make a user wait for a slow external process (Email, Payments, Image Proce
 - **Workers**: Separate background processes pick up jobs from the queue and execute them.
 - **Control**: Allows for graceful retries, backoff strategies, and independent scaling of "heavy" tasks. See [[Deployment_Workflows|Deployment Workflows]].
 
-## Content Delivery Networks (CDN)
-Offload static assets (JS, CSS, Images) to global edge servers (CloudFront, Fastly).
-- **Impact**: Decreases latency for global users and removes asset requests from the application's infrastructure.
+## High-Scale Systems Case Study: Twitter
+
+Scaling to hundreds of millions of users requires a shift from monolithic applications to specialized internal services.
+
+### 1. The Migration to Scala/JVM
+Twitter famously migrated its core architecture from Ruby on Rails to **Scala** and the **JVM**.
+- **Concurrency**: The JVM's mature threading and the actor model in Scala (via **Finagle**) allowed handling massive request volumes that were bottlenecking the single-threaded Ruby GIL.
+- **Type Safety**: Functional programming features in Scala reduced bugs in complex distributed systems while maintaining developer productivity.
+
+### 2. Specialized Infrastructure Services
+To handle petabytes of data, Twitter developed (and often open-sourced) specific services:
+- **Snowflake**: A service for generating unique, roughly time-ordered IDs at scale.
+- **Thrift/Protobuf**: Binary serialization protocols that are much faster and more compact than JSON for service-to-service communication.
+- **Gizzard/FlockDB**: Frameworks for distributed data storage and querying social graphs.
+- **Earlybird**: A real-time search engine based on Lucene.
+
+### 3. Production vs. Tutorial Code
+The primary difference in high-scale systems is the handling of **failure modes**:
+- **Tutorial Code**: Assumes connections never drop, resources are infinite, and logic is synchronous.
+- **Production Code**: Implements circuit breakers, retries with exponential backoff, timeouts, and rate limiting to prevent "cascading failures" in distributed environments.

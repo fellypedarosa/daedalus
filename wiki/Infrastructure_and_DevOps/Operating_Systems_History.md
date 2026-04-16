@@ -4,6 +4,7 @@ date_created: 2026-04-12
 sources:
   - "[[Akitando 60 - Entendendo WSL 2 | E uma curta história sobre Windows NT]] (Clipper)"
   - "[[Akitando 42 - Apple, GPL e Compiladores]] (Clipper)"
+  - "[[Akitando 61 - Meus Primeiros 5 Anos]] (Clipper)"
 ---
 # Operating Systems History and Architecture
 
@@ -36,3 +37,18 @@ Universal OSs often support "Personalities" to run software from other systems:
 - **WoW64 (Windows 32 on Windows 64)**: Allows 32-bit applications to run on 64-bit Windows through a compatibility layer.
 - **Wine (Wine Is Not an Emulator)**: A compatibility layer that translates Windows API calls to Linux syscalls in real-time. It is "black-box" engineering, reimplementing Windows DLLs from scratch.
 - **Proton**: A Steam-specific distribution of Wine optimized for high-performance gaming on Linux.
+
+## Historical Context: The PC Era Transition
+
+The early 90s marked the transition from single-user, non-networked systems to multi-user, distributed architectures.
+
+### 1. MS-DOS Environment
+- **Hardware Constraints**: Systems like the PC XT (8MHz, 640KB/1MB RAM) ran MS-DOS, a single-user OS with no memory protection.
+- **Persistence**: Storage was limited to 10MB to 40MB "Winchester" hard drives or 5.25" floppy disks.
+- **Application Logic**: Languages like **Clipper** and **dBase** were used to build database-centric business software (SGBDs) that directly interacted with the hardware interrupts (IRQs) for performance.
+
+### 2. The Move to 32-bit and Networking
+The arrival of **Windows NT** and the popularization of **Unix (HP-UX, Solaris)** in academic environments (like USP) introduced foundational concepts:
+- **Protected Mode**: The ability for the OS to prevent one program from crashing the entire system by isolating memory spaces.
+- **Multitasking/Multi-user**: Moving from "one person per machine" to "multiple terminals per server" via serial and coaxial ethernet (10Base2/5) cabling.
+- **Structured Networking**: Transitioning from physical manual routing to software-defined stacks (TCP/IP), shell access (Telnet/Rlogin), and distributed file systems (NFS).

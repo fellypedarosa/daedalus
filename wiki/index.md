@@ -46,6 +46,7 @@ This is the central catalog of the Daedalus knowledge base.
 - [[Infrastructure_and_DevOps/Storage_and_Filesystems.md|NAS Architecture]]: High-performance storage servers, 10GbE, and SHR.
 - [[Infrastructure_and_DevOps/Shell_Mechanics.md|Shell Mechanics]]: Pipes, redirection primitives, shims, and terminal multiplexing (TMux).
 - [[Computer_Science/Theoretical_Computer_Science.md|Theoretical Computer Science]]: Turing Machines, Turing Completeness, and the Halting Problem.
+- [[Computer_Science/Quantum_Computing.md|Quantum Computing]]: Foundations of superposition, entanglement, and the engineering barriers of decoherence.
 - [[Computer_Science/Symmetric_and_Asymmetric_Encryption.md|Symmetric and Asymmetric Encryption]]: Fundamental algorithms covering AES symmetric keys, RSA, and Ed25519 elliptic curve exchange.
 - [[Cryptographic_Hashing|Cryptographic Hashing]]: Fingerprinting binary payloads securely while neutralizing collision and rainbow table vulnerabilities.
 - [[Blockchain_Fundamentals|Blockchain Fundamentals]]: Validating immutability and digital non-fungibility versus failure modes in private secrecy applications equivalent to elections.
@@ -70,6 +71,12 @@ This is the central catalog of the Daedalus knowledge base.
 - [[Web_Development/History_of_the_Front-End.md|History of the Front-End]]: Evolution of frontend web development, from CGI to React/SPA.
 - [[Databases/PostgreSQL.md|PostgreSQL]]: Postgres architecture, MVCC, and query optimization.
 - [[Programming/Programming_Paradigms.md|Programming Paradigms]]: OOP, functional, imperative paradigms, and design patterns.
+- [[Programming/Vibe_Coding.md|Vibe Coding]]: The 2026 agentic orchestration paradigm focusing on intent and technical precision.
 - [[Infrastructure_and_DevOps/RAID_and_Storage_Redundancy.md|RAID and Storage Redundancy]]: RAID levels, SHR, and redundancy strategies.
 - [[Infrastructure_and_DevOps/VPN_and_ZeroTier.md|VPN and ZeroTier]]: VPN tunneling, WireGuard, and P2P overlay networks.
 - [[Artificial_Intelligence/Claude_Code.md|Claude Code]]: Terminal-based LLM agent for infrastructure management and development workflows.
+- [[Computer_Science/Graph_Theory.md|Graph Theory]]: Mathematical structures for modeling social graphs, hubs, and recommendation algorithms (SALSA, PageRank).
+- [[Artificial_Intelligence/Vector_Databases.md|Vector Databases]]: Multi-dimensional embedding storage and Similarity Search for RAG (Retrieval-Augmented Generation).
+- [[Artificial_Intelligence/LLM_Harness_and_Reasoning.md|LLM Harness and Reasoning]]: The shift towards specialized tool layers (Rédias) and internal reasoning loops (Thinking) in 2026.
+- [[Artificial_Intelligence/FABIO_AKITA_-_Flow_588.md|FABIO AKITA - Flow 588]]: Podcast highlights and technical takeaways.
+- [[Concepts/Complexity_and_Evolution.md|Complexity and Evolution]]: Complex Adaptive Systems, the Edge of Chaos, and iterative system feedback loops.
