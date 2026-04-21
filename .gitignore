@@ -7,8 +7,8 @@ raw/youtube/
 __pycache__/
 .obsidian/
 *.pyc
-.SUGGESTIONS.md
 .gemini_worker_context.md
 .task_instruction.txt
 .worker_output.md
 .worker_err.log
+SUGGESTIONS.md
