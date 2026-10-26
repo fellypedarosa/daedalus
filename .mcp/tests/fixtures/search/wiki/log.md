@@ -1,0 +1,2 @@
+# Log
+Administrative word mustnotbesearchable.

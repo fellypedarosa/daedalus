@@ -1,0 +1,12 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    uses: ./.github/workflows/verify.yml

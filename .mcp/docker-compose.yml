@@ -1,0 +1,31 @@
+name: daedalus-public-demo
+services:
+  daedalus-mcp:
+    image: daedalus-public-mcp:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./tmp/demo-vault/wiki:/vault/wiki
+      - ./tmp/demo-vault/raw:/vault/raw
+      - ./tokens.json:/run/daedalus/tokens.json:ro
+      - search-index:/var/lib/daedalus-search
+      - search-models:/models:ro
+      - audit-logs:/var/log/daedalus
+      - ingest-state:/var/lib/daedalus-ingest
+      - sync-state:/var/lib/daedalus-sync
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  search-index:
+  search-models:
+  audit-logs:
+  ingest-state:
+  sync-state:

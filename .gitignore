@@ -1,0 +1,74 @@
+# Credenciais e configurações locais (qualquer profundidade)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+tokens.json
+mcp.json
+credentials.json
+service-account.json
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Ambientes, caches e estado privado
+.venv/
+venv/
+.mcp_venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.download/
+.daedalus-sync/
+.daedalus-ingest/
+.daedalus-models/
+.daedalus-logs/
+.daedalus-search/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.onnx
+*.safetensors
+
+# Auditoria, estudos, backups e contexto de agentes
+*.log
+*audit*.jsonl
+tmp/
+.gemini_worker_context.md
+.task_instruction.txt
+.worker_output.md
+.worker_err.log
+*.bak
+*.backup
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+.DS_Store
+.obsidian/
+.idea/
+.vscode/
+
+# Acervo pessoal na raiz; exemplos e fixtures permanecem versionáveis
+/raw/**
+!/raw/.gitkeep
+/wiki/**
+!/wiki/.gitkeep
+
+# Ferramentas locais do ambiente
+/.aws/
+/.agents/
+/.codex/
+
+# Guia local de preparação; não distribuir
+/AGENTS.md

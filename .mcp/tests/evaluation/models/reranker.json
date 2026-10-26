@@ -1,0 +1,12 @@
+{
+  "repository": "SugoLabs/mmarco-mMiniLMv2-L12-H384-v1",
+  "max_length": 512,
+  "license": "Apache-2.0",
+  "kind": "reranker",
+  "revision": "6772eee1ea62dc82e1fcaaf3ed90c269fdcb1fcf",
+  "onnx_file": "onnx/model_quantized.onnx",
+  "files": {
+    "tokenizer.json": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+    "onnx/model_quantized.onnx": "6e57207c62deb625b5751a376f32ac66109281b0d199a2aec09f2671e066acf5"
+  }
+}

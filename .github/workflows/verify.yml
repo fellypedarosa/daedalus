@@ -1,0 +1,41 @@
+name: Verify
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Python 3.12 and MCP
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      XDG_STATE_HOME: ${{ runner.temp }}/daedalus-public-state
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r .mcp/requirements.lock
+      - run: python -m unittest discover -s .mcp/tests -t .mcp -v
+      - name: Check synthetic retrieval example
+        env:
+          DAEDALUS_INGEST_DIR: ${{ runner.temp }}/daedalus-demo-ingest
+          DAEDALUS_SYNC_DIR: ${{ runner.temp }}/daedalus-demo-sync
+        run: |
+          python .mcp/scripts/evaluate_search.py --vault examples/vault --backend lexical --split all --index-dir .mcp/tmp/demo-index --output .mcp/tmp/demo-evaluation.json
+      - name: Check synthetic ingestion and local publication
+        run: python .mcp/scripts/check_demo_ingestion.py
+      - run: bash -n .mcp/deploy/deploy.sh .mcp/scripts/auto_backup.sh
+      - name: Validate Compose
+        run: |
+          env -i "$(command -v docker)" compose --env-file /dev/null -f .mcp/docker-compose.yml config --quiet
+  container:
+    name: Container Python 3.12
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f .mcp/Dockerfile --target test --tag daedalus-search-test .mcp

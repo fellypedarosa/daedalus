@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "judgment_status": "synthetic_unreviewed",
+  "notes": "Perguntas didáticas sobre examples/vault; julgamentos sintéticos sem revisão independente. Não é benchmark validado.",
+  "queries": [
+    {
+      "id": "umidade",
+      "query": "Qual o limiar de alerta de umidade?",
+      "scope": "wiki",
+      "category": "synthetic",
+      "split": "tuning",
+      "mode": "auto",
+      "judgments": {
+        "wiki/Laboratorio/Umidade.md": 3
+      }
+    },
+    {
+      "id": "frequencia",
+      "query": "A cada quantos minutos ocorre a medição?",
+      "scope": "all",
+      "category": "synthetic",
+      "split": "tuning",
+      "mode": "auto",
+      "judgments": {
+        "raw/local/Sensores.md": 3
+      }
+    },
+    {
+      "id": "recuperacao",
+      "query": "Como recuperar a configuração do simulador?",
+      "scope": "wiki",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "auto",
+      "judgments": {
+        "wiki/Laboratorio/Recuperacao.md": 3
+      }
+    },
+    {
+      "id": "copia",
+      "query": "Qual a frequência da cópia da configuração?",
+      "scope": "raw",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "auto",
+      "judgments": {
+        "raw/local/Recuperacao.md": 3
+      }
+    },
+    {
+      "id": "retencao",
+      "query": "Por quantos dias manter registros de medição?",
+      "scope": "wiki",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "auto",
+      "judgments": {
+        "wiki/Laboratorio/Registros.md": 3
+      }
+    },
+    {
+      "id": "relatorio",
+      "query": "O que contém o relatório semanal?",
+      "scope": "raw",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "auto",
+      "judgments": {
+        "raw/local/Registros.md": 3
+      }
+    },
+    {
+      "id": "restauracao",
+      "query": "Quando acontece o exercício de restauração?",
+      "scope": "all",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "auto",
+      "judgments": {
+        "wiki/Laboratorio/Recuperacao.md": 3
+      }
+    },
+    {
+      "id": "literal",
+      "query": "30 por cento",
+      "scope": "raw",
+      "category": "synthetic",
+      "split": "validation",
+      "mode": "exact",
+      "judgments": {
+        "raw/local/Sensores.md": 3
+      }
+    }
+  ]
+}

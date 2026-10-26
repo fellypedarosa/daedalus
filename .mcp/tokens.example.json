@@ -1,0 +1,23 @@
+{
+  "tokens": [
+    {
+      "id": "example-reader",
+      "token": "<REPLACE_WITH_A_UNIQUE_RANDOM_TOKEN>",
+      "description": "Generate a fresh token, then explicitly enable this entry.",
+      "scopes": [
+        "daedalus:read"
+      ],
+      "active": false
+    },
+    {
+      "id": "example-ingest-client",
+      "token": "<REPLACE_WITH_ANOTHER_UNIQUE_RANDOM_TOKEN>",
+      "description": "Enable only after reviewing write permissions.",
+      "scopes": [
+        "daedalus:read",
+        "daedalus:ingest"
+      ],
+      "active": false
+    }
+  ]
+}
