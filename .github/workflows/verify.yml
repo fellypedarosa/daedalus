@@ -11,8 +11,6 @@ jobs:
     name: Python 3.12 and MCP
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    env:
-      XDG_STATE_HOME: ${{ runner.temp }}/daedalus-public-state
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,6 +18,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -r .mcp/requirements.lock
       - run: python -m unittest discover -s .mcp/tests -t .mcp -v
+        env:
+          XDG_STATE_HOME: ${{ runner.temp }}/daedalus-public-state
       - name: Check synthetic retrieval example
         env:
           DAEDALUS_INGEST_DIR: ${{ runner.temp }}/daedalus-demo-ingest
